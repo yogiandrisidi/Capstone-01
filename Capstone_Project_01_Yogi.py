@@ -64,7 +64,7 @@ def menu_awal():
          print(f'{inventory[i]["Kode Produk"]}\t\t| {inventory[i]["Nama Produk"]}\t| {inventory[i]["Kondisi"]}\t\t| {inventory[i]["Garansi"]}\t| {inventory[i]["Warna"]}\t\t| {inventory[i]["Rak"]}\t\t| {int(inventory[i]["Jumlah Produk"])}')
 
 def show_rak():
-    rak= input('Masukan nama rak yang ingin ditampilkan: ')
+    rak = input('Masukan nama rak yang ingin ditampilkan: ')
     print (' Kode Produk\t| Nama Produk\t| Kondisi\t| Garansi\t| Warna\t\t| Rak\t\t| Jumlah Produk\t')
     print ('==================================================================================================================')
     for i in inventory.keys():
@@ -79,7 +79,7 @@ def show_warna():
     print ('==================================================================================================================')
     for i in inventory.keys():
         if warna.lower() in inventory[i]["Warna"]:
-            print('{}\t\t| {}\t| {}\t| {}\t\t| {}\t\t| {}\t\t|{}'.format(inventory[i]["Kode Produk"],inventory[i]["Nama Produk"],inventory[i]["Kondisi"],inventory[i]["Garansi"],inventory[i]["Warna"],inventory[i]["Rak"],inventory[i]["Jumlah Produk"]))
+            print('{}\t\t| {}\t| {}\t\t| {}\t| {}\t\t| {}\t\t|{}'.format(inventory[i]["Kode Produk"],inventory[i]["Nama Produk"],inventory[i]["Kondisi"],inventory[i]["Garansi"],inventory[i]["Warna"],inventory[i]["Rak"],inventory[i]["Jumlah Produk"]))
         else:
             continue
 
@@ -184,7 +184,7 @@ def delete_produk():
                 print(f'{inventory[i]["Warehouse"]}\t\t| {inventory[i]["Category"]}\t\t| {inventory[i]["Rack Location"]}\t\t|{inventory[i]["Product Name"]}\t| {int(inventory[i]["Quantity (pcs)"])}')
         while True:
             x = input('''Apakah yakin untuk menghapus produk tersebut?
-                (Y untuk Y/N untuk tidak): ''')
+                (Y untuk ya/N untuk tidak): ''')
             if x == 'Y':
                 del inventory[keysdelete]
                 print('Produk telah dihapus dari gudang.')
@@ -296,10 +296,10 @@ while True :
 
         List Menu
         1. Menampilkan Stok yang Ada
-        2. Menambah Barang
-        3. Menghapus Barang
-        4. Mengambil Barang
-        5. Restock Barang
+        2. Menambah Produk
+        3. Menghapus Produk
+        4. Mengambil Produk
+        5. Restock Produk
         6. Cek Stok
         7. Keluar Program
 
@@ -310,7 +310,7 @@ while True :
         while True:
             extramenu = input(
                 '''
-                Ingin menampilkan 
+                Apa yang ingin ditampilkan 
                 1. Semua stok di gudang
                 2. Semua stok berdasarkan lokasi rak
                 3. Semua stok berdasarkan warna
@@ -345,7 +345,7 @@ while True :
     elif menu=='2':
         while True:
             menu2 = input('''
-                1. Menambahkan stok baru
+                1. Menambahkan produk baru
                 2. Mengubah produk yang sudah ada
                 3. Kembali ke menu awal
                 4. Keluar
